@@ -1,9 +1,27 @@
-let name = "Larissa"; // arajin harci patasxan
-console.log(`hello ${1}`); // hello 1
-console.log (`hello {"name"}`); // hello name 
-console.log (`hello ${name}`); // hello Larissa
+let person = {
+    name: "Larissa",
+    age: 17,
+    city: "Yerevan",
+}
+person.isStudent = true;
+delete person.city;
+console.log("age" in person);
 
-let userName = 12345; // userName-i hamar string e anhrajesht
-let userAge = "шестандцать"; //userAge-y petq e tiv lini, ev ruseren cankali che grel
-let isOnline = "yes" // sa petq e boolean liner
-let score = true; // jisht e
+
+// erkrord
+function undefined(object){
+    for(key in obj){
+        if(obj[key]===undefined){
+            delete obj[key];
+        }
+    }
+}
+  let  obj = {
+        key1: 'hello',
+        key2: undefined,
+        key3: 123,
+        key4: undefined,
+
+    }
+let und = undefined(obj);
+console.log(und);
