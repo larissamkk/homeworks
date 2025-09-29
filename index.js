@@ -1,27 +1,16 @@
-let person = {
-    name: "Larissa",
-    age: 17,
-    city: "Yerevan",
-}
-person.isStudent = true;
-delete person.city;
-console.log("age" in person);
+//4rd
+// const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"]
+// result = words.filter((word)=> word.length >6);
+// console.log(result);
 
 
-// erkrord
-function undefined(object){
-    for(key in obj){
-        if(obj[key]===undefined){
-            delete obj[key];
-        }
-    }
-}
-  let  obj = {
-        key1: 'hello',
-        key2: undefined,
-        key3: 123,
-        key4: undefined,
-
-    }
-let und = undefined(obj);
-console.log(und);
+//6rd
+const people = [
+    {name: "Anna", age:17},
+    {name: "Karen", age: 20},
+    {name: "Ella", age:12},
+    {name:"Erik" age:30},
+]
+result = people.find((person) =>person.age > 18 );
+result =people.filter((person) => person.age >= 18);
+result = people.map((person) => person.name);
