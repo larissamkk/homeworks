@@ -26,10 +26,10 @@
 //     }else return Promise.reject('Not in stock')
 // }
 // const products = [
-// {id:10, name:"Laptop", price:1000},
-// {id:11, name:"Phone", price:600}
+// {id:15, name:"Laptop", price:1000},
+// {id:11, name:"Phone", price:880}
 // ]
-// fetchProduct(products, 10)
+// fetchProduct(products, 11)
 // .then ((data) => 
 //     console.log(data))
 // .catch((err) =>
@@ -48,7 +48,7 @@
 // {id:101, title:"Harry Potter", author:"Rowling"},
 // {id:102, title:"1984", author:"Orwell"}
 // ]
-// fetchBook(books,102)
+// fetchBook(books,100)
 // .then((data) =>
 // console.log(data))
 // .catch((err)=>
@@ -66,7 +66,7 @@
     
 // }
 // const ordersList = []
-// createOrder(ordersList, 2, [{name:"Laptop", price:1000}]);
+// createOrder(ordersList, 2, [{name:"Laptop", price:5000}]);
 // .then((data) =>
 // console.log(data))
 // .catch((err)=>
@@ -113,7 +113,7 @@
 // {id:1, name:"Anna", role:"admin"},
 // {id:2, name:"Bob", role:"user"}
 // ]
-// blockUser(usersList, 2)
+// blockUser(usersList, 1)
 // .then((data)=>
 // console.log(data));
 // .catch((err)=>
