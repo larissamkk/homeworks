@@ -1,48 +1,120 @@
-// let arr = [1,2,3,4,5];
-// arr.splice(2,2);
-
-// let arr = [1,2,7,8];
-// arr.splice(0,3, 5,6,8);
-
-// function reversing(arr1, arr2,){
-//     connected = arr1.concat(arr2);
- //    reversed =  connected.reverse();
- //    return reversed;
+// // arajin
+// function fetchUser(users, id) {
+//     const user = users.find(u => u.id == id)
+//     if(user){
+//         return Promise.resolve(user)
+//     } else return Promise.reject('Not found')
 // }
-// a = [1,2,3]
-// b = [4,5,6];
-// console.log(reversing(a,b));
+// const users = [
+//     {id:1, name:"Ann", role:"admin"},
+//     {id:2, name:"John", role:"user"}
+
+// ]
+// fetchUser(users,2)
+// .then((data) =>
+//      console.log(data))
+// .catch((err) => 
+//     console.log(err)); 
 
 
-// const fruits = "kiwi, banana, apple, melon".split(",");
-// console.log(fruits);
 
-
-// const arr = ["i", "learn", "js"];
-// const str = arr.join("");
-// console.log(str);
-
-
-// let arr = ["html", "css", "js"];
-// console.log(arr.includes("js"));
-
-
-// function hasString(arr,str){
-//     return arr.includes(str);
+// // erkrord
+// function fetchProduct(products, id){
+//     const product = products.find(p => p.id == id)
+//     if(product){
+//         return Promise.resolve(product)
+//     }else return Promise.reject('Not in stock')
 // }
-// console.log(hasString(["apple", "banana"] "kiwi"));
+// const products = [
+// {id:10, name:"Laptop", price:1000},
+// {id:11, name:"Phone", price:600}
+// ]
+// fetchProduct(products, 10)
+// .then ((data) => 
+//     console.log(data))
+// .catch((err) =>
+// console.log(err));
 
 
-// let nums = [10,20,30,40,50,60];
-// nums.splice(1,3);
-// console.log(nums);
+
+// // errord
+// function fetchBook(books, id){
+//     const book = books.find(b => b.id == id)
+//     if(book){
+//         return Promise.resolve(book)
+//     } else Promise.reject('Not found')
+// }
+// const books = [
+// {id:101, title:"Harry Potter", author:"Rowling"},
+// {id:102, title:"1984", author:"Orwell"}
+// ]
+// fetchBook(books,102)
+// .then((data) =>
+// console.log(data))
+// .catch((err)=>
+// console.log(err));
 
 
-// let text = "hi how are you";
-// let reversed = text.split("").reverse().join("");
-// console.log(reversed);
+
+// // chorord
+// function createOrder(orders, userId, items){
+//     if(items.length == 0)
+//         return Promise.reject('Not in stock');
+//     let order = {userId, items:[...items]};
+//     orders.push(order);
+//         return Promise.resolve(order);
+    
+// }
+// const ordersList = []
+// createOrder(ordersList, 2, [{name:"Laptop", price:1000}]);
+// .then((data) =>
+// console.log(data))
+// .catch((err)=>
+// console.log(err));
 
 
-// let animals = ["cat", "dog", "hamster", "parrot"];
-// let found = animals.find(word => word.includes("r"));
-// console.log(found);
+
+// // hingerord
+// function updateUserRole(users, userId, role){
+// const validRoles = ["admin", "user", "moderator"];
+// const user = users.find(u => u.id == userId)
+//     if (!user) {
+//  return Promise.reject("User not found");
+// }
+//     if (!validRoles.includes(role)) {
+//  return Promise.reject("Invalid role");
+// }
+// user.role = role;
+// return Promise.resolve(user);
+// }
+// const usersList = [
+// {id:1,name:"Anna",role:"admin"},
+// {id:2,name:"John",role:"user"}
+// ]
+// updateUserRole(usersList, 2, "admin")
+// .then((result) => 
+//     console.log("updated:", (result)))
+// .catch((err) => 
+// console.log("error:", (err)));
+
+
+
+// // vecerord
+// function blockUser(users, userId){
+//     let user = users.find(u => u.id == userId);
+//     if(!user)
+//         return Promise.reject('user not found');
+//     if else(user.blocked === true)
+//         return Promise.reject('user is already blocked');
+//     user.blocked = true
+//     return Promise.resolve(user);
+// }
+// const usersList = [
+// {id:1, name:"Anna", role:"admin"},
+// {id:2, name:"Bob", role:"user"}
+// ]
+// blockUser(usersList, 2)
+// .then((data)=>
+// console.log(data));
+// .catch((err)=>
+// console.log(err));
